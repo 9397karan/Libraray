@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: black;
+    color: #fff;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 4px 4px 8px rgba(95, 95, 95, 0.5);
+}
+
+nav h2 {
+    font-size: 24px;
+}
+
+/* Hero Section (Search, Sort, and View Toggle) */
+.hero {
+    background-image: url("images/bg.jpg");
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    gap: 15px;
+}
+
+.hero div {
+    display: flex;
+    gap: 10px;
+}
+
+.hero div input {
+    width: 30vw;
+    height: 40px;
+    padding: 5px 10px;
+    background-color: #fff;
+    color: black;
+    font-size: 18px;
+    border-radius: 20px;
+    outline: none;
+}
+
+.hero div button {
+    cursor: pointer;
+    height: 40px;
+    padding: 5px 15px;
+    background-color: #0600c2;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+}
+
+/* Sorting Dropdown */
+#sortOptions {
+    height: 40px;
+    width: 10vw;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+#sortOptions:focus {
+    border: 2px solid #0600c2;
+}
+
+/* View Toggle Buttons */
+.view-toggle {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.view-toggle button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #4a44ed;
+    color: white;
+    transition: 0.3s;
+}
+
+.view-toggle button.active {
+    background-color: #ff4757;
+}
+
+.view-toggle button:hover {
+    opacity: 0.8;
+}
+
+/* Grid View (Default) */
+.books-card.grid-view {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+}
+
+/* Grid View Card */
+.grid-view .card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #020024;
+    border: 1px solid #3931d87d;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px 4px #3931d835;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.grid-view .card:hover {
+    transform: scale(1.05);
+}
+
+/* Card Image */
+.grid-view .card img {
+    width: 100%;
+    max-width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Card Title */
+.grid-view .card h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #4a44ed;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/* Card Details */
+.grid-view .card div {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.grid-view .card p {
+    font-size: 14px;
+    margin: 0;
+    padding: 2px 0;
+    color: #ccc;
+}
+
+/* List View */
+.books-card.list-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 90%;
+    margin: auto;
+}
+
+.list-view .card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+    background-color: #020024;
+    border: 1px solid #3931d87d;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px 4px #3931d835;
+    transition: 0.3s;
+}
+
+.list-view .card:hover {
+    transform: scale(1.02);
+}
+
+.list-view .card a {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    align-items: center;
+    width: 100%;
+}
+
+/* Image for List View */
+.list-view .card img {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+/* Text Content for List View */
+.list-view .card div {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.list-view .card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #4a44ed;
+}
+
+.list-view .card p {
+    font-size: 14px;
+    margin: 3px 0;
+    color: #ccc;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.page-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    outline: none;
+}
+
+.prev-btn {
+    background-color: #ff4757;
+    color: white;
+}
+
+.next-btn {
+    background-color: #1e90ff;
+    color: white;
+}
+
+.page-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.page-btn:active {
+    transform: scale(0.95);
+}
+
+.disabled {
+    background-color: grey;
+    cursor: no-drop;
+}
+/* Responsive Grid & List View */
+@media (max-width: 768px) {
+    .books-card.grid-view {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .list-view .card {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .list-view .card img {
+        width: 100px;
+        height: 150px;
+        margin-right: 10px;
+    }
+}

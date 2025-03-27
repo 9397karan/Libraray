@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <div class="container">
+        <nav>
+            <h2>Library</h2>
+            <img src="/images/logoGif.gif" alt="" width="80px" height="80px">
+        </nav>
+        <div class="hero">
+            <div>
+                <input type="text" id="search" placeholder="Search books">
+                <button id="searchBtn">Search</button>
+            </div>
+            <div>
+                <select id="sortOptions">
+                    <option value="">Sort by</option>
+                    <option value="title">Title (A-Z)</option>
+                    <option value="date">Published Date (Newest)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="books-container">
+            <center><h1 class="title" style="margin-top: 20px;">All Books</h1></center>
+            <div class="view-toggle">
+                <button id="gridViewBtn" class="active">Grid View</button>
+                <button id="listViewBtn">List View</button>
+            </div>
+            <div class="books-card" id="booksContainer">
+               
+            </div>
+        
+           
+        </div>
+
+        <div class="pagination">
+            <button class="page-btn prev-btn" id="prev-btn">Previous Page</button>
+            <button class="page-btn next-btn" id="next-btn">Next Page</button>
+        </div>
+   </div> 
+    
+   <script src="script.js"></script>
+</body>
+</html>
