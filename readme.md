@@ -13,6 +13,8 @@ This is a web application that allows users to search, browse, and sort books us
 ## Screenshots
 
 ![Library Home](/images/home.png)
+
+
 ![Library Books](/images/image.png)
 
 ## Technologies Used
@@ -26,7 +28,7 @@ This is a web application that allows users to search, browse, and sort books us
 
 The application is hosted online. You can access it here:
 
-[Live Demo](https://your-deployment-link.com)
+[Live Demo](https://9397karan.github.io/Libraray/)
 
 
 
